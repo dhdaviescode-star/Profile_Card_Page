@@ -3,10 +3,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #054848;
   min-height: 100vh;
-
 }
 .profile-card {
   background-color: #2b5aa0;
@@ -17,7 +16,9 @@ body {
   max-width: 400px;
   width: 90%;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .profile-card:hover {
@@ -68,6 +69,13 @@ body {
   font-size: 0.9rem;
 }
 
+.skills span:hover {
+  background-color: #0e3266;
+  color: #c7bbdf;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 .social-links a {
   color: #ab91de;
   text-decoration: none;
@@ -80,6 +88,8 @@ body {
 .social-links a:hover {
   color: #0e3266;
   background-color: #dad5e4;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .contact-btn {
@@ -92,8 +102,10 @@ body {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
   margin-top: 20px;
   display: inline-block;
 }
