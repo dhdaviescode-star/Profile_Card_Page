@@ -1,18 +1,42 @@
+/* VARIABLES */
+:root {
+  --page-bg: #054848;
+  --card-bg: #2b5aa0;
+
+  --primary-text: rgb(233, 235, 236);
+  --secondary-text: #cfd8dc;
+
+  --accent-light: #c7bbdf;
+  --accent-dark: #0e3266;
+
+  --tag-bg: #dad5e4;
+  --link-color: #ab91de;
+
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  --spacing-small: 10px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+}
+
+/* GLOBAL STYLES */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #054848;
+  background-color: var(--page-bg);
   min-height: 100vh;
 }
+
+/* PROFILE CARD */
 .profile-card {
-  background-color: #2b5aa0;
-  color: rgb(233, 235, 236);
-  padding: 20px;
+  background-color: var(--card-bg);
+  color: var(--primary-text);
+  padding: var(--spacing-medium);
   border-radius: 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px var(--spacing-medium) var(--shadow-color);
   max-width: 400px;
   width: 90%;
   text-align: center;
@@ -30,77 +54,83 @@ body {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
 }
+
+/* TYPOGRAPHY */
 .profile-card h1 {
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
   font-size: 1.5rem;
 }
 
 .profile-card h2 {
-  margin-bottom: 20px;
-  font-size: 1.0rem;
+  margin-bottom: var(--spacing-medium);
+  font-size: 1rem;
   font-weight: normal;
-  color: #cfd8dc;
+  color: var(--secondary-text);
 }
 
 .profile-card p {
   line-height: 1.6;
-  color: #cfd8dc;
+  color: var(--secondary-text);
 }
 .social-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-medium);
 }
 
+/* SKILLS */
 .skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px;
-  gap: 10px;
+  margin-bottom: var(--spacing-medium);
+  gap: var(--spacing-small);
 }
 
 .skills span {
-  background-color: #dad5e4;
+  background-color: var(--tag-bg);
   color: #0e3266;
   padding: 8px 14px;
-  border-radius: 20px;
+  border-radius: var(--spacing-medium);
   font-size: 0.9rem;
 }
 
 .skills span:hover {
-  background-color: #0e3266;
+  background-color: var(--accent-dark);
   color: #c7bbdf;
   transform: scale(1.05);
   cursor: pointer;
 }
 
+/* SOCIAL LINKS */
+
 .social-links a {
-  color: #ab91de;
+  color: var(--link-color);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: var(--spacing-small);
 }
 
 .social-links a:hover {
-  color: #0e3266;
-  background-color: #dad5e4;
+  color: var(--accent-dark);
+  background-color: var(--link-color);
   transform: scale(1.05);
   cursor: pointer;
 }
 
+/* BUTTON */
 .contact-btn {
   border: none;
-  background-color: #c7bbdf;
-  color: #0e3266;
+  background-color: var(--accent-light);
+  color: var(--accent-dark);
   text-decoration: none;
-  padding: 10px 20px;
+  padding: var(--spacing-small) var(--spacing-medium);
   border-radius: 12px;
   font-weight: bold;
   font-size: 1rem;
@@ -109,18 +139,19 @@ body {
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
-  margin-top: 20px;
+  margin-top: var(--spacing-medium);
   display: inline-block;
 }
 .contact-btn:hover {
-  background-color: #0e3266;
-  color: #c7bbdf;
+  background-color: var(--accent-dark);
+  color: var(--accent-light);
   transform: scale(1.05);
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
   .profile-card {
-    padding: 20px;
+    padding: var(--spacing-medium);
   }
   .profile-card img {
     width: 120px;
@@ -131,7 +162,7 @@ body {
   }
 
   .profile-card h2 {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   .skills span {
@@ -140,6 +171,6 @@ body {
   }
 
   .social-links {
-    gap: 10px;
+    gap: var(--spacing-small);
   }
 }
