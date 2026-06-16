@@ -212,7 +212,7 @@ body {
 /* Style for project titles (h3) */
 .project-card h3 {
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: var(--spacing-small);
   color: var(--accent-light);
   font-weight: 500;
   font-size: 1.1rem;
@@ -220,7 +220,7 @@ body {
 
 /* Style for paragraphs inside project cards */
 .project-card p {
-  margin-bottom: 4px;
+  margin-bottom: var(--spacing-small);
   line-height: 1.5;
   color: var(--secondary-text);
   font-size: 0.9rem;
@@ -230,12 +230,12 @@ body {
 .project-link {
   display: inline-block;
   margin-top: 8px;
-  padding: 6px 16px;
+  padding: var(--spacing-small) var(--spacing-medium);
   background-color: var(--accent-light);
   color: var(--accent-dark) !important;
   text-decoration: none;
-  border-radius: 15px;
-  font-weight: 600;
+  border-radius: 12px;
+  font-weight: bold;
   font-size: 0.8rem;
   transition:
     background-color 0.3s ease,
@@ -252,7 +252,7 @@ body {
 /* Responsiveness: On wider screens, show cards side by side */
 @media (min-width: 600px) {
   /* This targets the container that holds both project cards */
-  .project-section > div:not(h2) {
+  .project-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-medium);
