@@ -63,7 +63,7 @@ body {
   font-size: 1.5rem;
 }
 
-.profile-card h2 {
+.profile-card h3 {
   margin-bottom: var(--spacing-medium);
   font-size: 1rem;
   font-weight: normal;
@@ -73,6 +73,7 @@ body {
 .profile-card p {
   line-height: 1.6;
   color: var(--secondary-text);
+  font-size: 0.9rem;
 }
 .social-links {
   display: flex;
@@ -172,5 +173,93 @@ body {
 
   .social-links {
     gap: var(--spacing-small);
+  }
+}
+/* PROJECT SECTION */
+.project-section {
+  margin-top: var(--spacing-large);
+  padding-top: var(--spacing-medium);
+  border-top: 2px solid var(--secondary-text);
+  width: 100%;
+}
+/* Style for the "My Projects" heading */
+.project-section h2 {
+  color: var(--primary-text);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-medium);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Each individual project card */
+.project-card {
+  background-color: rgba(255, 255, 255, 0.08); /* Slightly-transparent white */
+  padding: 15px 18px;
+  margin-bottom: var(--spacing-medium);
+  border-radius: 16px;
+  border-left: 4px solid var(--accent-light);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+  transform: translateX(4px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Style for project titles (h3) */
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: var(--accent-light);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+/* Style for paragraphs inside project cards */
+.project-card p {
+  margin-bottom: 4px;
+  line-height: 1.5;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+/* Style for the "View on GitHub" links */
+.project-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 16px;
+  background-color: var(--accent-light);
+  color: var(--accent-dark) !important;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Hover effect for project links */
+.project-link:hover {
+  background-color: var(--accent-dark);
+  color: var(--accent-light) !important;
+  transform: scale(1.05);
+}
+
+/* Responsiveness: On wider screens, show cards side by side */
+@media (min-width: 600px) {
+  /* This targets the container that holds both project cards */
+  .project-section > div:not(h2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-medium);
+  }
+
+  /* Make sure the heading stays above the grid */
+  .project-section h2 {
+    grid-column: 1 / -1; /* Span all columns */
   }
 }
