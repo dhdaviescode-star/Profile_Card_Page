@@ -189,7 +189,23 @@ body {
   margin-bottom: var(--spacing-medium);
   letter-spacing: 0.5px;
   text-align: center;
+  position: relative;
+  padding-bottom: var(--spacing-small);
 }
+
+/* Underline for the heading */
+.project-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--accent-light);
+  border-radius: 2px;
+}
+
 
 /* Each individual project card */
 .project-card {
